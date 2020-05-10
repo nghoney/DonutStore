@@ -18,7 +18,7 @@ export class DonutComponent implements OnInit {
         private http: HttpClient,
         private transferState: TransferStateService,
     ) {
-        let donut$ = transferState.useScullyTransferState(
+        let donut$ = this.transferState.useScullyTransferState(
             'donut',
             this.route.parent.params.pipe(
                 pluck('donutId'),
